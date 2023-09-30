@@ -22,7 +22,7 @@ const PasswordOptions = ({
   setIncludeSpecialCharacters
 }: PasswordOptionsTypes) => {
   return (
-    <FlexContainer className="gap-x-2 py-5 text-base  text-orange-500">
+    <FlexContainer className="gap-x-2 space-x-8 py-5 text-base text-orange-500">
       <LengthInput length={length} setLength={setLength} />
       <IncludeNumbersInput
         includeNumbers={includeNumbers}

@@ -17,7 +17,12 @@ const PasswordContainer = ({ password }: PasswordContainerTypes) => {
         placeholder="password"
         readOnly={true}
       />
-      <Button className="bg-blue-700 px-3 py-1 text-white outline-none">
+      <Button
+        onClick={() => {
+          navigator.clipboard.writeText(password);
+        }}
+        className="bg-blue-700 px-3 py-1 text-white outline-none"
+      >
         copy
       </Button>
     </FlexContainer>

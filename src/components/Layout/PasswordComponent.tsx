@@ -31,7 +31,7 @@ const PasswordComponent = () => {
   }, [length, includeNumbers, includeSpecialCharacters]);
 
   return (
-    <div className="px-5">
+    <div className="mt-20 px-5">
       <form className="mx-auto my-8 w-full max-w-xl rounded-lg bg-gray-700 px-4 pt-10">
         <PasswordContainer password={password} />
         <PasswordOptions

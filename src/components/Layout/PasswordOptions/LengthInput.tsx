@@ -24,7 +24,7 @@ const LengthInput = ({ length, setLength }: LengthInputTypes) => {
         min={6}
         max={40}
         value={length}
-        className="cursor-pointer outline-none"
+        className="mx-auto cursor-pointer outline-none"
         label={`Length: ${length}`}
         onChange={changeLengthHandler}
         innerRef={inputLength}
