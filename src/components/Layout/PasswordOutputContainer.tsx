@@ -1,12 +1,13 @@
 import React from "react";
 import FlexContainer from "../UI/FlexContainer";
 import Button from "../UI/Button";
+import { copyPassword } from "../../functions/copyPassword";
 
 type PasswordContainerTypes = {
   password: string;
 };
 
-const PasswordContainer = ({ password }: PasswordContainerTypes) => {
+const PasswordOutputContainer = ({ password }: PasswordContainerTypes) => {
   return (
     <FlexContainer className="mx-auto mb-4 h-10 max-w-lg rounded-lg shadow">
       <input
@@ -19,9 +20,9 @@ const PasswordContainer = ({ password }: PasswordContainerTypes) => {
       />
       <Button
         onClick={() => {
-          navigator.clipboard.writeText(password);
+          copyPassword(password);
         }}
-        className="bg-blue-700 px-3 py-1 text-white outline-none"
+        className="bg-blue-700 px-3 py-1 text-lg text-white outline-none hover:bg-blue-800 sm:ml-[-0.5rem]"
       >
         copy
       </Button>
@@ -29,4 +30,4 @@ const PasswordContainer = ({ password }: PasswordContainerTypes) => {
   );
 };
 
-export default PasswordContainer;
+export default PasswordOutputContainer;

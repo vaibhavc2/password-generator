@@ -2,7 +2,7 @@ import React, { useCallback, useEffect, useState } from "react";
 
 import { passwordGenerator as generatorFunction } from "../../functions/passwordGenerator";
 
-import PasswordContainer from "./PasswordContainer";
+import PasswordOutputContainer from "./PasswordOutputContainer";
 import PasswordOptions from "./PasswordOptions/PasswordOptions";
 
 const PasswordComponent = () => {
@@ -33,7 +33,7 @@ const PasswordComponent = () => {
   return (
     <div className="mt-20 px-5">
       <form className="mx-auto my-8 w-full max-w-xl rounded-lg bg-gray-700 px-4 pt-10">
-        <PasswordContainer password={password} />
+        <PasswordOutputContainer password={password} />
         <PasswordOptions
           length={length}
           includeNumbers={includeNumbers}
