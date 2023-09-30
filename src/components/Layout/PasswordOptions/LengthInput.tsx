@@ -17,14 +17,15 @@ const LengthInput = ({ length, setLength }: LengthInputTypes) => {
   };
 
   return (
-    <FlexContainer className="items-center gap-x-1">
+    <FlexContainer className="items-center">
       <Input
         id="length"
         type="range"
         min={6}
         max={40}
         value={length}
-        className="mx-auto cursor-pointer outline-none"
+        className="cursor-pointer outline-none"
+        labelClass="sm:text-center"
         label={`Length: ${length}`}
         onChange={changeLengthHandler}
         innerRef={inputLength}

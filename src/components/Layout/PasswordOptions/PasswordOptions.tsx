@@ -1,5 +1,4 @@
 import React, { Dispatch, SetStateAction } from "react";
-import FlexContainer from "../../UI/FlexContainer";
 import LengthInput from "./LengthInput";
 import IncludeNumbersInput from "./IncludeNumbersInput";
 import IncludeSpecialCharactersInput from "./IncludeSpecialCharactersInput";
@@ -22,7 +21,7 @@ const PasswordOptions = ({
   setIncludeSpecialCharacters
 }: PasswordOptionsTypes) => {
   return (
-    <FlexContainer className="gap-x-2 space-x-8 py-5 text-base text-orange-500">
+    <div className="wrap mx-auto w-full gap-x-2 overflow-hidden py-5 pl-6 text-lg text-orange-500 sm:flex sm:space-x-5">
       <LengthInput length={length} setLength={setLength} />
       <IncludeNumbersInput
         includeNumbers={includeNumbers}
@@ -32,7 +31,7 @@ const PasswordOptions = ({
         includeSpecialCharacters={includeSpecialCharacters}
         setIncludeSpecialCharacters={setIncludeSpecialCharacters}
       />
-    </FlexContainer>
+    </div>
   );
 };
 

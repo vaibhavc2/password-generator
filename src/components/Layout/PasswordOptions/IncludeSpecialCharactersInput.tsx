@@ -16,7 +16,7 @@ const IncludeSpecialCharactersInput = ({
   };
 
   return (
-    <FlexContainer className="items-center gap-x-1">
+    <FlexContainer className="items-center">
       <Input
         id="special-chars"
         type="checkbox"

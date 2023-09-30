@@ -7,7 +7,10 @@ const FlexContainer = ({
   ...restProps
 }: ComponentProps<"div">) => {
   return (
-    <div className={twMerge("flex overflow-hidden", className)} {...restProps}>
+    <div
+      className={twMerge("flex overflow-hidden sm:gap-x-2", className)}
+      {...restProps}
+    >
       {children}
     </div>
   );

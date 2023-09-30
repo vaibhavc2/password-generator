@@ -16,7 +16,7 @@ const IncludeNumbersInput = ({
   };
 
   return (
-    <FlexContainer className="items-center gap-x-1">
+    <FlexContainer className="items-center">
       <Input
         id="numbers"
         type="checkbox"
