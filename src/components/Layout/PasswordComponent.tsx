@@ -20,10 +20,14 @@ const PasswordComponent = () => {
   };
 
   // useCallback returns an optimised version of the input callback function, which uses techniques like memoisation and caching
+  // give all the dependencies for caching to optimise and increase performance
   const passwordGenerator = useCallback(passwordSetter, [
     length,
     includeNumbers,
     includeSpecialCharacters,
+    setLength,
+    setIncludeNumbers,
+    setIncludeSpecialCharacters,
     setPassword
   ]);
 
