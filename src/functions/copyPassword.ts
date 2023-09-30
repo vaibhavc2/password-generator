@@ -1,9 +1,15 @@
+import { RefObject } from "react";
 import { passwordCopiedAlert } from "./passwordCopiedAlert";
 
-export const copyPassword = async (password: string) => {
+export const copyPassword = async (
+  password: string,
+  length: number,
+  passwordRef: RefObject<HTMLInputElement>
+) => {
   try {
     await navigator.clipboard.writeText(password);
-    // alert("Password Copied");
+    passwordRef.current?.select();
+    passwordRef.current?.setSelectionRange(0, length);
     passwordCopiedAlert();
   } catch (err) {
     alert(`ERROR: ${err}`);
