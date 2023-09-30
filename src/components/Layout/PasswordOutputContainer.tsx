@@ -16,7 +16,7 @@ const PasswordOutputContainer = ({
 
   const copyPasswordToClipboard = useCallback(() => {
     copyPassword(password, length, passwordRef);
-  }, [password]);
+  }, [password, length]);
 
   return (
     <FlexContainer className="mx-auto mb-4 h-10 max-w-lg rounded-lg shadow">

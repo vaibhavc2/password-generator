@@ -1,4 +1,4 @@
-import React, { Dispatch, FormEvent, SetStateAction, useRef } from "react";
+import React, { Dispatch, SetStateAction, useRef } from "react";
 import FlexContainer from "../../UI/FlexContainer";
 import Input from "../../UI/Input";
 
@@ -10,9 +10,10 @@ type LengthInputTypes = {
 const LengthInput = ({ length, setLength }: LengthInputTypes) => {
   const inputLength = useRef<HTMLInputElement | null>(null);
 
-  const changeLengthHandler = (event: FormEvent<HTMLInputElement>) => {
-    const length = event.currentTarget.value;
-    // const length = inputLength.current?.focus();
+  // const changeLengthHandler = (event: FormEvent<HTMLInputElement>) => {
+  const changeLengthHandler = () => {
+    // const length = event.currentTarget.value;
+    const length = inputLength.current?.value;
     setLength(Number(length));
   };
 
